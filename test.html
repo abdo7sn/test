@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "futura md bt";
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    
+}
+::-webkit-scrollbar{
+    width: 15px;
+}
+
+::-webkit-scrollbar-track{
+    border-radius: 5px;
+    box-shadow: inset 0 0 10px rgba(0,0,0,0.25);
+}
+
+::-webkit-scrollbar-thumb{
+    border-radius: 5px;
+    background: linear-gradient(to top, #776B5D , #EBE3D5);
+}
+section{
+    width: 100%;
+    height: 95vh;
+    background-image: url(img/bg.jpg);
+    background-size: cover;
+    background-position: center;
+}
+header {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #0a060f;
+    padding: 0 50px;
+}
+header .logo {
+    font-size: 35px;
+    color: #776B5D;
+    margin: 5px 0;
+    cursor: pointer;
+    position: relative;
+    left: -1%;
+    
+}
+header .logo span{
+    color: #EBE3D5;
+    text-decoration: underline;
+}
+header nav ul {
+    display: flex;
+}
+header nav ul li{
+    position: relative;
+    left: -5%;
+    margin: 5px 25px;
+}
+header nav ul li a {
+    display: inline-block;
+    color: #fff;
+    padding: 5px 0;
+    margin: 0 10px;
+    border: 3px solid transparent;
+    text-transform: uppercase;
+    transition: 0.2s;
+}
+header nav ul li a:hover,
+header nav ul li a.active {
+    border-bottom-color: #EBE3D5;
+}
+.hamburger {
+    cursor: pointer;
+    display: none;
+}
+.hamburger div {
+    width: 30px;
+    height: 3px;
+    margin: 5px 0;
+    background: #fff;
+}
+section .main .main_content{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+section .main .main_content .main_text h1{
+    font-size: 90px;
+    line-height: 70px;
+    background: linear-gradient(to right, #776B5D , #EBE3D5);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: relative;
+    top: 180px;
+    right: 60%;
+}
+
+section .main .main_content .main_text h1 span{
+    font-size: 70px;
+    background: linear-gradient(to right, #776B5D , #EBE3D5);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+section .main .main_content .main_text p{
+    font-size: 20px;
+    color: #EBE3D5;
+    width: 600px;
+    text-align: justify;
+    line-height: 21px;
+    position: relative;
+    top: 220px;
+    right: 60%;
+}
+section .main .social_icon{
+    position: absolute;
+    top: 50%;
+    left: 98%;
+    transform: translate(-50%,-50%);
+    font-size: 19px;
+}
+section .main .social_icon i{
+    margin: 8px 0;
+    cursor: pointer;
+    transition: 0.3s;
+    color: #EBE3D5;
+}
+.equations{
+    width: 100%;
+    height: 140vh;
+    padding: 25px 0;
+    background-color: #191717;
+}
+
+.equations h1{
+    margin: 35px 0;
+    font-size: 60px;
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
+    background: linear-gradient(to right, #776B5D,#EBE3D5);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;    
+}
+.equations .box{
+    width: 90%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 25px 0;
+    cursor: pointer;
+}
+.equations .box .card{
+    width: 290px;
+    height: 290px;
+    box-shadow: 0 0 8px #776B5D;
+    border-radius: 5px;
+    text-align: center;
+    padding: 10px 20px;
+    background: #fff;
+    transition: 0.3s;
+}
+.equations .box .card:hover{
+    width: 300px;
+    height: 300px;
+}
+.equations .box .card .equations_text h2{
+    font-size: 30px;
+    margin-top: 15px;
+}
+
+.equations .box .card .equations_text p{
+    color: #91919191;
+    line-height: 21px;
+    margin: 8px 10px;
+}
+.equations .box .card .equations_text h3{
+    margin: 7px 0;
+    margin-bottom: 19px;
+}
+.equations .box .card .equations_text .btn{
+    text-decoration: none;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background: linear-gradient(to right, #776B5D,#EBE3D5);
+    color: white;
+}
+.equations .box .more{
+    width: 75px;
+    padding: 10px 20px;
+    border-radius: 30px;
+    background: linear-gradient(to right,#776B5D,#EBE3D5);
+    
+}
+.equations .box .more a{
+    color: white;
+    text-decoration: none;
+}
+.equations .box .more i{
+    color: white;
+    margin-left: 5px;
+    transition: 0.3s;
+}
+
+.equations .box .more:hover i{
+    transform: translateX(6px);
+}
+section .main .social_icon i:hover{
+    color: #776B5D;
+}
+/*footer*/
+footer{
+    width: 100%;
+}
+
+footer .footer_main{
+    width: 100%;
+    background: #191717;
+    display: flex;
+    justify-content: space-around;
+}
+
+footer .footer_main .tag{
+    margin: 10px 0;
+}
+
+footer .footer_main .tag .center{
+    text-align: center;
+}
+
+footer .footer_main .tag h1{
+    font-size: 25px;
+    margin: 25px 0;
+    color: #776B5D;
+}
+
+footer .footer_main .tag a{
+    display: block;
+    color: white;
+    text-decoration: none;
+    margin: 9px 0;
+}
+
+footer .footer_main .tag a i{
+    padding: 0 10px;
+    transition: 0.3;
+}
+
+footer .footer_main .tag a i:hover{
+    color: #776B5D;
+}
+
+footer .footer_main .tag .social_link{
+    display: flex;
+}
+
+footer .footer_main .tag .social_link a{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    box-shadow: 0 0 20px 10px rgba(0,0,0,0.05);
+    position: relative;
+    margin: 0 5px;
+    z-index: 10;
+    overflow: hidden;
+}
+
+footer .footer_main .tag .social_link a .fa-brands{
+    font-size: 15px;
+    line-height: 30px;
+    z-index: 10;
+    position: relative;
+    transition: 0.5s;
+}
+
+footer .footer_main .tag .social_link a:hover i{
+    color: black;
+}
+
+footer .footer_main .tag .social_link a::after{
+    content: '';
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: -90px;
+    background: linear-gradient(-45deg, #776B5D,#EBE3D5);
+    position: absolute;
+    z-index: -10;
+    transition: 0.5s;
+}
+
+footer .footer_main .tag .social_link a:hover::after{
+    left: 0;
+}
+
+footer .footer_main .tag .search_bar{
+    width: 230px;
+    height: 30px;
+    background: rgb(202, 202, 202);
+    border-radius: 25px;
+}
+
+footer .footer_main .tag .search_bar input{
+    width: 200px;
+    padding: 2px 0;
+    position: relative;
+    top: 17%;
+    left: 6%;
+    border: none;
+    background: none;
+    outline: none;
+    font-size: 13px;
+}
+
+footer .footer_main .tag .search_bar button{
+    padding: 7px 15px;
+    background: linear-gradient(to right, #776B5D,#EBE3D5);
+    border: none;
+    margin-top: 15px;
+    border-radius: 25px;
+    color: black;
+    cursor: pointer;
+}
+
+
+@media only screen and (max-width: 900px) {
+    header {
+        padding: 0 30px;
+    }
+}
+@media only screen and (max-width: 700px) {
+    .hamburger {
+        display: block;
+    }
+    header nav {
+        position: absolute;
+        width: 100%;
+        left: -100%;
+        top: 70px;
+        width: 100%;
+        background: #000;
+        padding: 30px;
+        transition: 0.3s;
+    }
+    header #nav_check:checked ~ nav {
+        left: 0;
+    }
+    header nav ul {
+        display: block;
+    }
+    header nav ul li a {
+        margin: 5px 0;
+    }
+    section .main .main_content .main_text h1{
+        top: 260px;
+        font-size: 80px;
+        right: 4%;
+    }
+    section .main .main_content .main_text h1 span{
+        font-size: 60px;
+    }
+    section .main .main_content .main_text p{
+        top: 280px;
+        width: 340px;
+        font-size: 20px;
+        right: 4%;
+    }
+    .equations{
+        width: 100%;
+        height: 170vh;
+        padding: 25px 0;
+        background-color: #191717;
+    }
+    .equations .box{
+        display: inline-block;
+        cursor: pointer;
+        padding-left: 50px;
+    }
+    .equations .box .card{
+        width: 290px;
+        height: 290px;
+        margin: 20px 0;
+        transition: 0.3s;
+    }
+    footer{
+    width: 100%;
+    }
+
+    footer .footer_main{
+        width: 100%;
+        height: 90vh;
+        display: inline-block;
+        background: #191717;
+        justify-content: space-around;
+    }
+
+    footer .footer_main .tag{
+        margin: 10px 0;
+    }
+
+    footer .footer_main .tag .center{
+        text-align: center;
+    }
+
+    footer .footer_main .tag h1{
+        text-align: center;
+        font-size: 25px;
+        margin: 25px 0;
+        color: #776B5D;
+    }
+
+    footer .footer_main .tag a{
+        text-align: center;
+        display: block;
+        color: white;
+        text-decoration: none;
+        margin: 9px 0;
+    }
+
+    footer .footer_main .tag a i{
+        padding: 0 10px;
+        transition: 0.3;
+    }
+
+    footer .footer_main .tag a i:hover{
+        color: #776B5D;
+    }
+
+    footer .footer_main .tag .social_link{
+        display: flex;
+    }
+
+    footer .footer_main .tag .social_link a{
+        position: relative;
+        left: 40%;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        text-align: center;
+        text-decoration: none;
+        color: white;
+        box-shadow: 0 0 20px 10px rgba(0,0,0,0.05);
+        position: relative;
+        margin: 0 5px;
+        z-index: 10;
+        overflow: hidden;
+    }
+
+    footer .footer_main .tag .social_link a .fa-brands{
+        font-size: 15px;
+        line-height: 30px;
+        z-index: 10;
+        position: relative;
+        transition: 0.5s;
+    }
+
+    footer .footer_main .tag .social_link a:hover i{
+        color: black;
+    }
+
+    footer .footer_main .tag .social_link a::after{
+        content: '';
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: -90px;
+        background: linear-gradient(-45deg, #776B5D,#EBE3D5);
+        position: absolute;
+        z-index: -10;
+        transition: 0.5s;
+    }
+
+    footer .footer_main .tag .social_link a:hover::after{
+        left: 0;
+    }
+
+    footer .footer_main .tag .search_bar{
+        position: relative;
+        left: 40%;
+        width: 230px;
+        height: 30px;
+        background: rgb(202, 202, 202);
+        border-radius: 25px;
+    }
+
+    footer .footer_main .tag .search_bar input{
+        width: 200px;
+        padding: 2px 0;
+        position: relative;
+        top: 17%;
+        left: 6%;
+        border: none;
+        background: none;
+        outline: none;
+        font-size: 13px;
+    }
+
+    footer .footer_main .tag .search_bar button{
+        padding: 7px 15px;
+        background: linear-gradient(to right, #776B5D,#EBE3D5);
+        border: none;
+        margin-top: 15px;
+        border-radius: 25px;
+        color: black;
+        cursor: pointer;
+    }
+
+}
+</style>
+</head>
+<body>
+    <section>
+        <header>
+            <div class="logo">
+                <h1>Phys<span>ics</span></h1>
+            </div>
+            <input type="checkbox" id="nav_check" hidden>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#Equations">Equations</a></li>
+                    <li><a href="#Tutorials">Tutorials</a></li>
+                    <li><a href="#About">About</a></li>
+                    <li><a href="#Servises">Servises</a></li>
+                </ul>
+            </nav>
+            <label for="nav_check" class="hamburger">
+                <div></div>
+                <div></div>
+                <div></div>
+            </label>
+        </header>
+        <div class="main" id="Home">
+            <div class="main_content">
+                <div class="main_text">
+                    <h1>Physics<br><span>Collection</span></h1>
+                    <p>
+                        Physics is that branch of science that basically deals with the prime constituents of matter, 
+                        its characteristics and behaviour and different related elements of force and energy. 
+                        Physics formulas are not meant to be memorised but conveyed in real-time and space.
+                         The application of the formulas of physics includes the concepts of mathematics and its formulas.
+                        It is also important to remember that if one is unable to crack the theoretical part of physics, that is, 
+                        understanding the theories properly, one can never find any relation between the formulas.
+                        In order to make the understanding easier, it is also recommended to know the S.I. units of Physics well.
+                    </p>
+                </div>
+                <div class="social_icon">
+                    <i class="fa-brands fa-facebook-f"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="equations" id="Equations">
+        <h1>Equations</h1>
+        <div class="box" id="box">
+            <div class="card" id="card">
+                <div class="equations_text">
+                    <h2>Calculate absolute error(X)</h2>
+                    <p>When measuring a value, it is important to be able to know how accurate the measurement is. When determining the adjustment ...</p>
+                    <h3>(𝑥o ± Δ𝑥)</h3>
+                    <a class="btn" href="equation1/equations1.html">Enter</a>
+                </div>
+            </div>
+            <div class="card" id="card">
+                <div class="equations_text">
+                    <h2>Calculate absolute error(/)</h2>
+                    <p>When measuring a value, it is important to be able to know how accurate the measurement is. When determining the adjustment ...</p>
+                    <h3>(𝑥o ± Δ𝑥)</h3>
+                    <a class="btn" href="equation2/equation2.html">Enter</a>
+                </div>
+            </div>
+            <div class="card" id="card">
+                <div class="equations_text">
+                    <h2>The resultant vertical force (Fy)</h2>
+                    <p>combining the sum of the vertical components of all the forces and the sum of all the horizontal components of the forces....</p>
+                    <h3>Fy = F sin θ°</h3>
+                    <a class="btn" href="equation3/equation3.html">Enter</a>
+                </div>
+            </div>
+            <div class="card" id="card">
+                <div class="equations_text">
+                    <h2>The resultant of horizontal forces (Fx)</h2>
+                    <p>combining the sum of the vertical components of all the forces and the sum of all the horizontal components of the forces ....</p>
+                    <h3>Fx = F cos θ°</h3>
+                    <a class="btn" href="equation4/equation4.html">Enter</a>
+                </div>
+            </div>
+            <div class="more">
+                <a href="file:///C:/wamp64/www/physics/physics_wip/more_equation.html">More..</a>
+                <i class="fa-solid fa-chevron-right"></i>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="footer_main">
+            <div class="tag">
+                <h1>Contact</h1>
+                <a href="#"><i class="fa-solid fa-house"></i>123/Colombo/Sri Lanka</a>
+                <a href="#"><i class="fa-solid fa-phone"></i>+20 01115800528</a>
+                <a href="#"><i class="fa-solid fa-envelope"></i>abdalrhmanalhasn2008@gmail.com</a>
+            </div>
+
+            <div class="tag">
+                <h1>Get Help</h1>
+                <a href="#" class="center">FAQ</a>
+                <a href="#" class="center">Solution</a>
+                <a href="#" class="center">Returns</a>
+                <a href="#" class="center">Payment Options</a>
+            </div>
+
+            <div class="tag">
+                <h1>Our Servises</h1>
+                <a href="#" class="center">Chemistry</a>
+                <a href="#" class="center">Biological</a>
+                <a href="#" class="center">Math</a>
+                <a href="#" class="center">Artificial intelligence</a>
+            </div>
+
+            <div class="tag">
+                <h1>Follw Us</h1>
+                <div class="social_link">
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>                    
+                </div>
+            </div>
+
+            <div class="tag">
+                <h1>Newsletter</h1>
+                <div class="search_bar">
+                    <input type="text" placeholder="You email id here">
+                    <button type="submit">Subscribe</button>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+</body>
+</html>

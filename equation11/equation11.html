@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Equation10</title>
+    <link rel="stylesheet" href="equation.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <section>
+        <nav id="nav">
+            <div class="logo">
+                <h1>Phys<span>ics</span></h1>
+            </div>
+            <ul>
+                <li><a href="/wamp64/www/physics/physics_wip/index.html">Home</a></li>
+                <li><a href="#Equations">Equations</a></li>
+                <li><a href="#Tutorials">Tutorials</a></li>
+                <li><a href="#About">About</a></li>
+                <li><a href="#Servises">Servises</a></li>
+            </ul>
+        </nav> 
+        <div class="main">
+            <div class="main_content">
+                <div class="main_text">
+                    <h2>Initial horizontal<br><span>velocity at an angle</span></h2>
+                    <p>
+                        When an object is projected from rest at an upward angle, its initial velocity can be resolved into two components. 
+                        These two components operate independently of each other. 
+                        The upward velocity undergoes constant downward acceleration which will result in it rising to a highest point and then falling backward to the ground.
+                        The horizontal motion is constant velocity motion and undergoes no changes due to gravity.The analysis of the motion involves dealing with the two motions independently.   
+                    </p>
+                </div>
+                <div class="low">
+                    <p>
+                        To calculate the initial horizontal velocity, you must have the initial velocity Vi and the angle with the horizontal, then multiply the initial velocity by the angular cos (Vix = Vi cosθ)...
+                    </p>
+                    <img src="img.webp" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="form">
+            <div class="main_form"><h1>Vix</h1></div>
+            <label for="">Vi:</label>
+            <input type="text" id="Vi" name="Vi" placeholder="Initial Velocity                                  m/s">
+            <br><br>
+            <label for="">θ:</label>
+            <input type="text" id="angle" name="angle" placeholder="The Angle">
+            <br><br>
+            <input type="submit" id="btn" class="btnclass" onclick="CIHV()" value="Calculate">
+            <h3>The Solution</h3>
+            <div class="solution">
+                <p id="dome"> </p>
+            </div>
+            <div class="other">
+                <h2>Other</h2>
+                <a href="equationVi.html"><input type="submit"  class="btnclass" value=" Vi "></a>
+                <a href="equationO.html"><input type="submit" class="btnclass" value=" θ "></a>
+            </div>
+        </div>
+    </section>
+    <hr>
+    <!--Equations-->
+    <div class="equations" id="Equations">
+        <h1>More Equations</h1>
+        <div class="box" id="box">
+            <div class="card" id="card">
+                <div class="equations_text">
+                    <h2>The resultant vertical force (Fy)</h2>
+                    <p>combining the sum of the vertical components of all the forces and the sum of all the horizontal components of the forces....</p>
+                    <h3>Fy = F sin θ°</h3>
+                    <a class="btn" href="file:///C:/wamp64/www/physics/physics_wip/equation3/equation3.html">Enter</a>
+                </div>
+            </div>
+            <div class="card" id="card">
+                <div class="equations_text">
+                    <h2>Calculate absolute error(X)</h2>
+                    <p>When measuring a value, it is important to be able to know how accurate the measurement is. When determining the adjustment ...</p>
+                    <h3>(𝑥o ± Δ𝑥)</h3>
+                    <a class="btn" href="file:///C:/wamp64/www/physics/physics_wip/equation1/equations1.html">Enter</a>
+                </div>
+            </div>
+            <div class="card" id="card">
+                <div class="equations_text">
+                    <h2>Calculate absolute error(/)</h2>
+                    <p>When measuring a value, it is important to be able to know how accurate the measurement is. When determining the adjustment ...</p>
+                    <h3>(𝑥o ± Δ𝑥)</h3>
+                    <a class="btn" href="file:///C:/wamp64/www/physics/physics_wip/equation2/equation2.html">Enter</a>
+                </div>
+            </div>
+            <div class="card" id="card">
+                <div class="equations_text">
+                    <h2>Vector multiplication(DM)</h2>
+                    <p>Cross product – also known as the "vector product", a binary operation on two vectors that results in another vector ...</p>
+                    <h3>A * B = |A||B|sin θn</h3>
+                    <a class="btn" href="file:///C:/wamp64/www/physics/physics_wip/equation6/equation6.html">Enter</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Footer-->
+
+    <footer>
+        <div class="footer_main">
+            <div class="tag">
+                <h1>Contact</h1>
+                <a href="#"><i class="fa-solid fa-house"></i>123/Colombo/Sri Lanka</a>
+                <a href="#"><i class="fa-solid fa-phone"></i>+20 01115800528</a>
+                <a href="#"><i class="fa-solid fa-envelope"></i>abdalrhmanalhasn2008@gmail.com</a>
+            </div>
+
+            <div class="tag">
+                <h1>Get Help</h1>
+                <a href="#" class="center">FAQ</a>
+                <a href="#" class="center">Solution</a>
+                <a href="#" class="center">Returns</a>
+                <a href="#" class="center">Payment Options</a>
+            </div>
+
+            <div class="tag">
+                <h1>Our Servises</h1>
+                <a href="#" class="center">Chemistry</a>
+                <a href="#" class="center">Biological</a>
+                <a href="#" class="center">Math</a>
+                <a href="#" class="center">Artificial intelligence</a>
+            </div>
+
+            <div class="tag">
+                <h1>Follw Us</h1>
+                <div class="social_link">
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>                    
+                </div>
+            </div>
+
+            <div class="tag">
+                <h1>Newsletter</h1>
+                <div class="search_bar">
+                    <input type="text" placeholder="You email id here">
+                    <button type="submit">Subscribe</button>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
